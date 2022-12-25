@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyBrowser</string>
+    <string name="toolbar_hint">Enter Search Url</string>
+</resources>
