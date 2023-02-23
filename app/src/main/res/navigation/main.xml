@@ -9,6 +9,16 @@
         android:id="@+id/browserFragment2"
         android:name="com.example.mybrowser.fragments.BrowserFragment"
         android:label="BrowserFragment"
+        tools:layout="@layout/fragment_browser" >
+        <action
+            android:id="@+id/action_browserFragment2_to_tabsFragment"
+            app:destination="@id/tabsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tabsFragment"
+        android:name="com.example.mybrowser.fragments.TabsTrayFragment"
+        android:label="BrowserFragment"
         tools:layout="@layout/fragment_browser" />
 
 </navigation>

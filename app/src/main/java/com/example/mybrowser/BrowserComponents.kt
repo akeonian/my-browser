@@ -5,10 +5,12 @@ import mozilla.components.browser.engine.system.SystemEngine
 import mozilla.components.browser.session.storage.SessionStorage
 import mozilla.components.browser.state.engine.EngineMiddleware
 import mozilla.components.browser.state.store.BrowserStore
+import mozilla.components.browser.thumbnails.storage.ThumbnailStorage
 import mozilla.components.concept.engine.DefaultSettings
 import mozilla.components.concept.engine.Engine
 import mozilla.components.concept.engine.mediaquery.PreferredColorScheme
 import mozilla.components.feature.session.SessionUseCases
+import mozilla.components.feature.tabs.TabsUseCases
 
 class BrowserComponents(applicationContext: Context) {
 
@@ -27,6 +29,8 @@ class BrowserComponents(applicationContext: Context) {
 
     val sessionStorage by lazy { SessionStorage(applicationContext, engine) }
 
+    val thumbnailStorage by lazy { ThumbnailStorage(applicationContext) }
+
     val store by lazy {
         BrowserStore(middleware = EngineMiddleware.create(engine))
     }
@@ -34,5 +38,7 @@ class BrowserComponents(applicationContext: Context) {
     val sessionUseCases by lazy { SessionUseCases(store) }
 
     // TODO: Initialize tabsUseCases
-    val tabsUseCases by lazy {  }
+    val tabsUseCases: TabsUseCases by lazy {
+        TabsUseCases(store)
+    }
 }

@@ -162,4 +162,5 @@ class BrowserFragment: Fragment() {
         }
         return BrowserMenuItemToolbar(listOf(back, forward))
     }
+
 }
