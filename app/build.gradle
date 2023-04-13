@@ -38,8 +38,8 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
 
@@ -50,6 +50,8 @@ dependencies {
     implementation "org.mozilla.components:browser-engine-system:$browser_version"
     implementation "org.mozilla.components:browser-session-storage:$browser_version"
     implementation "org.mozilla.components:browser-menu:$browser_version"
+    implementation "org.mozilla.components:browser-tabstray:$browser_version"
+    implementation "org.mozilla.components:browser-thumbnails:$browser_version"
     implementation "org.mozilla.components:support-ktx:$browser_version"
     implementation "org.mozilla.components:feature-toolbar:$browser_version"
     implementation "org.mozilla.components:feature-session:$browser_version"
